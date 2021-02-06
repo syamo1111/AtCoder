@@ -13,23 +13,22 @@ namespace AtCoder.Abc
             var sw = new System.IO.StreamWriter(Console.OpenStandardOutput()) { AutoFlush = false };
             Console.SetOut(sw);
 
-            // 文字列の入力
-            string s = Console.ReadLine();
-
-            // 整数の入力
-            long n = long.Parse(Console.ReadLine());
-
             // 文字列配列の入力
             string[] inputStrArray = Console.ReadLine().Split(' ');
-
-            // 整数配列の入力
-            var inputLongArray = Console.ReadLine().Split(' ').Select(i => long.Parse(i)).ToArray();
-
-
 
 
             string result = "";
 
+            var hantei = Math.Sqrt(int.Parse(inputStrArray[0] + inputStrArray[1]));
+
+            if (hantei == (int)hantei)
+            {
+                result = "Yes";
+            }
+            else
+            {
+                result = "No";
+            }
             Console.WriteLine(result);
 
             Console.Out.Flush();
